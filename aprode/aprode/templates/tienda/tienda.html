@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Tienda Comercio Justo</h1>
+  
+    <hr class="mt-2 mb-5">
+  
+    <div class="row text-center text-lg-left">
+    {% for producto in productos %}
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="https://wa.me/51918466972?text='{{producto.intro}}&lang=es'" class="d-block mb-4 h-100 text-center">
+              <img class="img-fluid img-thumbnail" src="{{producto.foto}}" alt="">
+              {{producto.intro}}
+            </a>         
+      </div>
+    {% endfor %}
+
+    </div>
+  
+  </div>
+{% endblock %}

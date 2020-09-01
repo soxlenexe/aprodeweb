@@ -1,0 +1,49 @@
+{% load static %}
+
+<section class="py-5" id="seccion0">
+    <div class="container">
+        <h4 class="font-weight-light">
+            <span><img src="{% static 'img/logo.png' %}" alt="logo"></span> 
+            <b id="seccion0b1"><b>ONG Asocioacion Pro Desarrollo Peru Vida</b></b>
+            <span>
+                <button class="btn btn-dark"><b>Decidete a <br> ser Voluntario</b></button>
+                <button class="btn btn-danger"><b>Realiza <br> tu Donacion</b></button>
+            </span>
+        </h4>
+        
+    </div>
+</section>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu">
+    <a class="navbar-brand" href="/#"><b>APRODE Peru Vida</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'frontpage' %}">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'ong' slug='nosotros'%}">Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'proyectos' %}">Proyectos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'tienda' %}">Tienda</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Qué Hacemos</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

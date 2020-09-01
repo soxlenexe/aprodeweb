@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Page Content -->
+<div class="container" style="margin-top: 50px;">
+	<div class="card mb-4">
+		<img class="card-img-top" src="{{proyecto.foto}}" alt="Card image cap">
+		<div class="card-body">
+		  <h2 class="card-title">{{proyecto.title}}</h2>
+		  <p class="card-text">{{proyecto.body|safe}}</p>
+		</div>
+		<div class="card-footer text-muted">
+		 {{proyecto.date_added}}
+		</div>
+	  </div>
+</div>
+{% endblock %}

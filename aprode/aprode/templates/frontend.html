@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Page Content -->
+<section class="showcase">
+    <div class="container-fluid p-0">
+      {% for seccion in secciones %}
+        <!--Orientacion a la izquierda-->
+          {% if seccion.id == 0 or seccion.id|divisibleby:2 == 0 %}
+          <div class="row no-gutters">
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{{seccion.foto}}');"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+              <h2>{{seccion.titulo}}</h2>
+              <p class="lead mb-0">{{seccion.body|safe}}</p>
+            </div>
+          </div>
+          {% else %}
+          <!--Orientacion a la derecha-->
+          <div class="row no-gutters">
+            <div class="col-lg-6 text-white showcase-img" style="background-image: url('{{seccion.foto}}');"></div>
+            <div class="col-lg-6 my-auto showcase-text">
+              <h2>{{seccion.titulo}}</h2>
+              <p class="lead mb-0">{{seccion.body|safe}}</p>
+            </div>
+          </div>
+          {% endif %}
+        {% endfor %}
+
+    </div>
+  </section>
+{% endblock %}

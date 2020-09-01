@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style="margin: 50px;">
+    {% for proyecto in proyectos %}
+    <!-- Project One -->
+    <div class="row">
+        <div class="col-md-7">
+            <a href="{{proyecto.slug}}">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="{{proyecto.foto}}" alt="">
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h3>{{proyecto.title}} - <span class="badge badge-pill badge-success">{{proyecto.categoria}}</span></h3>
+            <p style="text-align: justify;">{{proyecto.intro|safe}}</p>
+            <a class="btn btn-primary" href="{% url 'proyecto' proyecto.slug %}">Ver proyecto</a>
+        </div>
+    </div>
+    <!-- /.row -->
+    
+    <hr>
+	{% endfor %}
+	{# include '../others/categorias.html'#}
+</div>
+{% endblock %}

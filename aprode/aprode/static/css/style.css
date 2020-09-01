@@ -1,0 +1,103 @@
+/* carrusel */
+.carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.carousel-caption{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*seccion0*/
+#seccion0{
+    padding-top: 0px;
+    padding-top: 0px;
+    /*background-color: #87E2FF;*/
+    max-height: 100px;
+}
+#seccion0 .container{
+    margin-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -30px;
+}
+#seccion0 .container h4 span img{
+    max-height: 80px;
+
+}
+#seccion0 .container h4 span button{
+    width: 150px;
+    margin-top: 20px;
+    margin: 5px;
+    float: right;
+
+}
+#seccion0b1 {
+    color: #000080;
+}
+@media(max-width: 1200px){
+    #seccion0 .container h4 span button{
+        display: none;
+    
+    }
+    #seccion0 .container h4 span img{
+        max-height: 50px;
+    
+    }
+}
+
+
+
+
+/*menu*/
+#menu{
+    min-height: 80px;
+}
+nav a b{
+    color: #000080;
+}
+
+/*footer*/
+#sticky-footer {
+
+}
+
+/*seccion1*/
+#seccion1{
+    overflow:inherit;
+    background-color: whitesmoke;
+}
+
+
+/*otros*/
+.container-left{
+    float: left;
+    background-color: salmon;
+    width: 45%;
+    height: 100px;
+}
+.container-right{
+    float: right;
+    background-color: salmon;
+    width: 45%;
+    height: 100px;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+.env {
+  min-height: 100vh;
+}
+
+footer{
+    margin-top: 0px;
+    color: white;
+}

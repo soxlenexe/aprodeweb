@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Page Content -->
+<div class="container" style="margin-top: 50px;">
+	<div class="card mb-4">
+		<img class="card-img-top" src="{{page.foto}}" alt="Card image cap">
+		<div class="card-body">
+		  <h2 class="card-title">{{page.title}}</h2>
+		  <p class="card-text">{{page.body|safe}}</p>
+		</div>
+	</div>
+</div>
+{% endblock %}
